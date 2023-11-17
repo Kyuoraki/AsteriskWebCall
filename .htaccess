@@ -1,0 +1,7 @@
+AuthType GSSAPI
+AuthName "GSSAPI Login"
+GssapiCredStore keytab:/etc/apache2/telecom.keytab
+Require valid-user
+AddHandler fcgid-script .php .html .htm
+DirectoryIndex index.php
+php_value opcache.revalidate_freq 2
